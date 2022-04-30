@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> header}}
+
+<body>
+	<div class="main">
+		<div class="wrapper">
+			<h1 class="title">Skript Editor</h1>
+			<p class="text-wrapper">skript.ml is a web application tool allowing you to easily edit your skript
+				applications.
+			</p>
+			<a href="app" class="app">Open The App</a>
+		</div>
+	</div>
+	<div class="features">
+		<h1>What is skript?</h1>
+		<p>Skript is an event-based programming language. It's syntax is similar to python, and highlighted close to
+			VScript. <br>Here's a simple example of Skript in use:</p>
+		<pre><code>on join:<br>&emsp;send "Welcome to the server! Have fun :D"</code></pre>
+		<h1>Is it open source?</h1>
+		<p>Yes! <a href="https://github.com/LeoDog896/Skript-Editor">Click here for the GitHub repository.</a></p>
+	</div>
+	<script>
+		if (navigator.serviceWorker) navigator.serviceWorker.register('/sw.js', {
+			scope: '/'
+		});
+	</script>
+	<link rel="stylesheet" href="/lib/styles/index.css">
+</body>
+
+</html>

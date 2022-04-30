@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+html,
+body {
+	height: 100%;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+
+}
+
+@keyframes slide {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -400px 0;
+	}
+}
+
+.main {
+	background: gray inline("./src/public/images/scrolling.png") repeat 0 0;
+	margin: 0;
+	text-align: center;
+	box-sizing: border-box;
+	animation: slide 20s linear infinite;
+	height: 100vh;
+	width: 100%;
+	display: table;
+}
+
+.wrapper {
+	display: table-cell;
+	height: 100vh;
+	vertical-align: middle;
+}
+
+.title {
+	font-size: 40px;
+}
+
+.text-wrapper {
+	width: 60%;
+	margin: auto;
+	padding-bottom: 25px;
+	font-size: 20px;
+}
+
+.app {
+	border-radius: 5px;
+	padding: 4px 16px 4px 16px;
+	border: 2px solid 4C92C8;
+	text-decoration: none;
+	color: white;
+	background-color: #539ed9;
+	transition: 0.2s all;
+	font-size: 20px;
+}
+
+.features {
+	height: 90vh;
+	width: 100%;
+}
+
+h1.features {
+	font-size: 4em;
+	text-align: left;
+	padding: 1em;
+}
+
+.section {
+	width: 100%;
+	height: 30vh;
+}
+
+.pre {
+	text-align: left;
+}
+
+.footer {
+	height: 10vh;
+	width: 100%;
+}
+
+.app:hover {
+	padding: 6px 24px 6px 24px;
+	box-shadow: 2px 5px 4px grey;
+}
+
+pre code {
+	background-color: #eee;
+	border: 1px solid #999;
+	display: block;
+	padding: 20px;
+	text-align: left;
+	width: fit-content;
+	margin: auto;
+}

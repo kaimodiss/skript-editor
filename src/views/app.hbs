@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> header}}
+
+<body>
+	<input type="file" id="fileElem" multiple accept=".sk, .txt" style="display:none"
+		onchange="handleFiles(this.files)">
+	<div class="header">
+		<img id="file" class="button" alt="Files" src="images/file.svg" width="50" height="50">
+		<img id="import" class="button" alt="Upload File(s)" src="images/upload.svg" width="50" height="50">
+		<img id="export" class="button" alt="Download File" src="images/download.svg" width="50" height="50">
+		<img id="options" class="button" alt="Options" src="images/options.svg" width="50" height="50">
+		<img id="link" class="button" alt="Short URL Button" src="images/link.svg" width="50" height="50">
+		<img id="share" class="button" alt="Share" src="images/share.svg" width="50" height="50">
+	</div>
+	<div class="main">
+		<div class="compile-code">
+			<pre name="code" id="editor" style="border: none;"></pre>
+		</div>
+	</div>
+	<div class="footer">
+		{{> footer}}
+	</div>
+	<div class="modal options-modal">
+		<div class="modal-content">
+			{{> settings}}
+		</div>
+	</div>
+	<link rel="stylesheet" href="lib/styles/main.css">
+	<link rel="stylesheet" href="lib/styles/toast.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="/ace/ace.js"></script>
+	<script src="/lib/scripts/codeblast.js"></script>
+	<script src="/ace/ext-split.js"></script>
+	<script src="/ace/ext-language_tools.js"></script>
+	<script src="/lib/scripts/toast.js"></script>
+	<script src="/lib/scripts/script.js" defer></script>
+	<script>
+		if (navigator.serviceWorker) navigator.serviceWorker.register('/sw.js', {
+			scope: '/'
+		});
+	</script>
+</body>
+
+</html>
